@@ -1,45 +1,57 @@
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.heroSection{
-    background: url('../images/HeroImage1.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.heroSection {
+  background: url("../images/HeroImage1.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.overlay{
-    background: rgba(0, 0, 0, 0.5);
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.cta{
-    background: linear-gradient(to right, #6C2C72, #C1416E);
+.cta {
+  background: linear-gradient(to right, #6c2c72, #c1416e);
 }
 
 /* Ensure the header doesn't overflow on mobile */
 header {
-    max-width: 100%;
-    overflow: hidden;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* Adjust padding for mobile */
 @media (max-width: 768px) {
-    header {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-    /* Ensure the menu icon is properly sized and positioned */
-    .menu-icon {
-        width: 24px;
-        height: 24px;
-    }
+  /* Ensure the menu icon is properly sized and positioned */
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* Ensure font sizes and spacing are responsive */
-h1, h3 {
-    text-align: center;
+h1,
+h3 {
+  text-align: center;
+}
+
+.sideBar {
+  display: none;
+  transition: all 5s ease-in-out;
+}
+
+/* Shown state */
+.sideBar.active {
+  display: flex;
+  height: auto;
 }
