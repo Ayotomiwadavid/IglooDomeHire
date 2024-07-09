@@ -56,3 +56,69 @@ h3 {
   display: flex;
   height: auto;
 }
+
+.accordion-content {
+    display: none;
+}
+.accordion-content.open {
+    display: block;
+}
+
+.accordion {
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.accordion-panel {
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion-title {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accordion-title:hover {
+    background-color: #ddd;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: white;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.dark .text-gray-400 {
+    color: #9ca3af;
+}
+
+.text-cyan-600 {
+    color: #0891b2;
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.list-disc {
+    list-style-type: disc;
+}
+
+.pl-5 {
+    padding-left: 1.25rem;
+}

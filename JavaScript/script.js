@@ -13,3 +13,18 @@ menuToggler.addEventListener("click", () => {
     menuToggler.src = "./images/menu.png";
   }
 });
+
+
+document.querySelectorAll('.accordion-title').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+
+        button.classList.toggle('active');
+
+        if (button.classList.contains('active')) {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+});
