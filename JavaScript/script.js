@@ -1,5 +1,12 @@
 const menuToggler = document.querySelector(".menuToggler");
 const sideBar = document.querySelector(".sideBar");
+const submitBtn = document.querySelector('#submitBtn');
+const fullName = document.querySelector('#fullName');
+const emailId = document.querySelector('#email_id');
+const Usermessage = document.querySelector('#message');
+const phoneNumber = document.querySelector('#phone');
+const eventDate = document.querySelector('#date');
+const contactForm = document.querySelector('#contactForm');
 
 menuToggler.addEventListener("click", () => {
   sideBar.classList.toggle("active");
@@ -27,4 +34,22 @@ document.querySelectorAll('.accordion-title').forEach(button => {
             content.style.display = 'none';
         }
     });
+});
+
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  console.log(fullName.value, Usermessage.value,phoneNumber.value, eventDate.value);
+  const message = {
+    from_name: fullName.value,
+    to_name: "Igloo Hire Dome",
+    message: `${Usermessage.value}. You can contact this customer with email:${emailId.value} and Phone number: ${phoneNumber.value}`,
+    event_date: eventDate.value,
+    };
+
+    emailjs.send("service_pkuthqc","template_ygaueul", message)
+    .then((res) => {
+      alert("Success!", res.status);
+      contactForm.reset();
+    })
 });

@@ -5,17 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/IglooLogo.png" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Igloo Dome Hire</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "QjkTowdPcBd3Gc9il",
+           });
+        })();
+     </script>
 </head>
 
 <body class="bg-[#f5f5f5] overflow-x-hidden">
     <header
         class="w-full overflow-x-hidden z-50 shadow-lg flex bg-[#fff] md:fixed top-0 right-0 px-4 py-4 items-center justify-between md:px-[5vw]">
         <div class="flex flex-col items-center max-w-[150px] cursor-pointer">
-            <h1 class="font-bold text-[#6A2B67] text-md md:text-xl uppercase">Igloo Dome</h1>
-            <h3 class="font-bold text-[#A93A61] text-md md:text-lg uppercase">Hire</h3>
+            <img src="./images/IglooLogo.png" class="h-[50px] w-[50px]" alt="Logo picture" srcset="">
         </div>
 
         <nav class="hidden md:flex items-center justify-center">
@@ -38,7 +49,7 @@
             </ul>
         </nav>
 
-        <a href="tel:0207 8560324" class="hidden md:flex underline">Call Us: 0207 8560324</a>
+        <a href="tel:0207 8560324" class="hidden md:flex underline">Call Us: 07592555064</a>
 
         <div class="flex md:hidden items-center justify-center">
             <img src="./images/menu.png" alt="menu img" class="w-6 h-6 menuToggler">
@@ -66,7 +77,7 @@
                     <li class="cursor-pointer font-semi-bold capitalize w-full text-left">Faq</li>
                 </a>
             </ul>
-            <a href="tel:0207 8560324" class="flex w-full text-left px-[10px] underline">Call Us: 0207 8560324</a>
+            <a href="tel:0207 8560324" class="flex w-full text-left px-[10px] underline">Call Us: 07592555064</a>
         </nav>
     </aside>
 
@@ -281,15 +292,15 @@
         <h3 class="font-semibold capitalize text-center font-sans" data-aos="fade-left" data-aos-offset="300"
             data-aos-easing="ease-in-sine">Enquire Today</h3>
         <form data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine"
-            class="flex flex-col items-center bg-[#f5f5f5] justify-center h-fit py-3 px-4 md:w-[80%] w-full shadow-md rounded-md gap-3">
-            <textarea title="Enquiry Description" name="description" id="descriptionInput "
+            class="flex flex-col items-center bg-[#f5f5f5] justify-center h-fit py-3 px-4 md:w-[80%] w-full shadow-md rounded-md gap-3" id="contactForm">
+            <textarea title="Enquiry Description" name="description" id="message"
                 class="w-full h-[180px] min-h-[180px] max-h-[200px] rounded-md p-3 outline-none"
                 placeholder="Briefly describe your enquiry"></textarea>
             <div class="w-full flex md:flex-row flex-col justify-between gap-3">
                 <input title="Name" placeholder="Name" class="md:w-1/2 w-full h-[55px] rounded-md outline-none p-4"
-                    type="text" name="name" id="name">
+                    type="text" name="name" id="fullName">
                 <input title="Email Address" placeholder="Email"
-                    class="md:w-1/2 w-full h-[55px] rounded-md outline-none p-4" type="email" name="email" id="email">
+                    class="md:w-1/2 w-full h-[55px] rounded-md outline-none p-4" type="email" name="email" id="email_id">
             </div>
             <div class="w-full flex md:flex-row flex-col justify-between gap-3">
                 <input title="Phone Number" placeholder="Phone Number"
@@ -299,7 +310,7 @@
             </div>
             <input type="submit"
                 class="bg-gradient-to-r from-[#6C2C72] to-[#C1416E] h-[55px] w-[85%] mt-2 cursor-pointer text-white font-bold rounded-md"
-                value="Sumit Now">
+                value="Sumit Now" id="submitBtn">
         </form>
     </aside>
 
@@ -417,10 +428,10 @@
             <h1 class="capitalize font-bold text-white text-xl">Contact</h1>
             <ul class="list-none gap-3 items-start justify-center">
                 <li class="text-white hover:underline font-serif cursor-pointer"> <a href="tel:0207 8560324"
-                        class="underline">Call Us: 0207 8560324</a> </li>
+                        class="underline">Call Us: 07592555064</a> </li>
                 <a href="mailto:skymarqueesltd@gmail.com"
-                    class="text-white hover:underline font-serif cursor-pointer capitalize">Mail Us:
-                    skymarqueesltd@gmail.com</a>
+                    class="text-white hover:underline font-serif cursor-pointer">Mail Us:
+                    classicmarquee@gmail.com</a>
                 <li class="text-white hover:underline font-serif cursor-pointer">Contact us through the form above</li>
             </ul>
         </div>
